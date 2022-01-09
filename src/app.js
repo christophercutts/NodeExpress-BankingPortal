@@ -11,6 +11,9 @@ app.get('/', function(req, res) {
         title: 'Index'
     });
 });
+
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.listen(3000, function(){
     console.log('PS Project Running on port 3000!');
 });
